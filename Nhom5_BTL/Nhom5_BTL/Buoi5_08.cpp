@@ -54,7 +54,7 @@ int main() {
         printf("So nguyen duong n khong co toan chu so le.\n");
     }//
 
-    // f. Kiem tra so nguyen duong n co toan chu so chan hay khong
+    /// f. Kiem tra so nguyen duong n co toan chu so chan hay khong
     tam = n;
     while (tam > 0) {
         int chuSo = tam % 10;
@@ -73,4 +73,4 @@ int main() {
 
     return 0;
 }
-
+//
