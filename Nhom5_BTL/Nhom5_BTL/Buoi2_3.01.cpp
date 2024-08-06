@@ -179,7 +179,7 @@ void timPhanTuChuaChuSo(int a[], int n, int x) {
     printf("\n");
 }//
 
-// Hàm sắp xếp mảng: số chẵn tăng dần, số lẻ giữ nguyên vị trí
+/// Hàm sắp xếp mảng: số chẵn tăng dần, số lẻ giữ nguyên vị trí
 void sapXepChanTangLeGiuNguyen(int a[], int n) {
     int chan[SIZE];
     int soChan = 0;
@@ -207,7 +207,7 @@ void sapXepChanTangLeGiuNguyen(int a[], int n) {
             a[i] = chan[idx++];
         }
     }
-}
+}//
 
 // Hàm sắp xếp mảng: số lẻ ở đầu mảng, số chẵn ở cuối mảng
 void sapXepLeDauChanCuoi(int a[], int n) {
