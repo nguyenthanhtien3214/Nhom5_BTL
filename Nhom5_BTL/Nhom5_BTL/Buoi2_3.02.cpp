@@ -28,7 +28,7 @@ void xuatDanhSachHonSo(HonSo b[], int n) {
     }
 }
 
-// Hàm tìm hỗn số x trong mảng b theo giải thuật Linear Search
+/// Hàm tìm hỗn số x trong mảng b theo giải thuật Linear Search
 int timHonSoLinearSearch(HonSo b[], int n, HonSo x) {
     for (int i = 0; i < n; i++) {
         if (b[i].phan_nguyen == x.phan_nguyen && b[i].tu_so == x.tu_so && b[i].mau_so == x.mau_so) {
@@ -36,7 +36,7 @@ int timHonSoLinearSearch(HonSo b[], int n, HonSo x) {
         }
     }
     return -1;
-}
+}//
 
 // Hàm sắp xếp b sao cho các phần tử có phần nguyên chẵn lên đầu, phần tử có phần nguyên lẻ ở cuối mảng
 void sapXepChanLe(HonSo b[], int n) {
