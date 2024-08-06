@@ -30,5 +30,8 @@
     <ClCompile Include="buoi1_13.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Buoi1_14.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
