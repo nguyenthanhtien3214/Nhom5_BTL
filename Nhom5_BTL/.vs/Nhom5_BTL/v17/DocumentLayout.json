@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi4_16.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi4_15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi4_14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_13.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi4_13.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_17.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi4_17.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Buoi4_16.cpp",
-              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_16.cpp",
-              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi4_16.cpp",
-              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_16.cpp",
-              "RelativeToolTip": "Nhom5_BTL\\Buoi4_16.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Title": "Buoi4_17.cpp",
+              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_17.cpp",
+              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi4_17.cpp",
+              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_17.cpp",
+              "RelativeToolTip": "Nhom5_BTL\\Buoi4_17.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-06T18:09:56.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Buoi4_15.cpp",
-              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_15.cpp",
-              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi4_15.cpp",
-              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_15.cpp",
-              "RelativeToolTip": "Nhom5_BTL\\Buoi4_15.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-06T18:08:19.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Buoi4_14.cpp",
-              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_14.cpp",
-              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi4_14.cpp",
-              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_14.cpp",
-              "RelativeToolTip": "Nhom5_BTL\\Buoi4_14.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-06T18:06:01.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Buoi4_13.cpp",
-              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_13.cpp",
-              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi4_13.cpp",
-              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi4_13.cpp",
-              "RelativeToolTip": "Nhom5_BTL\\Buoi4_13.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-06T18:04:39.111Z",
+              "WhenOpened": "2024-08-06T18:11:22.732Z",
               "EditorCaption": ""
             }
           ]
