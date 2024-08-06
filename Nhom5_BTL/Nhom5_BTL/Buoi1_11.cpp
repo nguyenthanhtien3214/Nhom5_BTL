@@ -1,6 +1,7 @@
 ﻿#include <stdlib.h>
 #include <ctype.h>
 #include <stdio.h>
+//
 void xuatCucTieu(int arr[], int n) {
     if (n < 3) {
         printf("Khong co so cuc tieu\n");
@@ -13,7 +14,7 @@ void xuatCucTieu(int arr[], int n) {
         }
     }
     printf("\n");
-}
+}//
 
 void xoaPhanTu(int arr[], int* n, int k) {
     if (k < 0 || k >= *n) {
