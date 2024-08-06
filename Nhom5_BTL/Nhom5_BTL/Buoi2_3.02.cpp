@@ -134,7 +134,7 @@ void taoMangPhanSo(HonSo b[], int n, HonSo c[]) {
     }
 }//
 
-// Hàm tính tổng các phần tử của mảng b
+/// Hàm tính tổng các phần tử của mảng b
 HonSo tongMang(HonSo b[], int n) {
     HonSo tong;
     tong.phan_nguyen = 0;
@@ -149,7 +149,7 @@ HonSo tongMang(HonSo b[], int n) {
         tong.mau_so = mau1;
     }
     return tong;
-}
+}//
 
 // Hàm tìm phần tử lớn nhất/nhỏ nhất của b
 HonSo timHonSoLonNhat(HonSo b[], int n) {
