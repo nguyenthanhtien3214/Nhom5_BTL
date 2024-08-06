@@ -15,7 +15,7 @@ void xuatCucTieu(int arr[], int n) {
     }
     printf("\n");
 }//
-
+//
 void xoaPhanTu(int arr[], int* n, int k) {
     if (k < 0 || k >= *n) {
         printf("Vi tri k khong hop le\n");
@@ -26,7 +26,7 @@ void xoaPhanTu(int arr[], int* n, int k) {
     }
     (*n)--;
 }
-
+//
 void themPhanTu(int arr[], int* n, int x, int k) {
     if (k < 0 || k > *n) {
         printf("Vi tri k khong hop le\n");
