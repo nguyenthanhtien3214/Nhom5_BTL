@@ -148,9 +148,12 @@
     <ClCompile Include="Buoi2_3.01.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Buoi2_3.03.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Buoi2_3.02.cpp" />
+    <None Include="Buoi2_3.02.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
