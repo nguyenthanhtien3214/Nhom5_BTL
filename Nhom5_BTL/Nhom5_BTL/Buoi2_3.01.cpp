@@ -80,7 +80,7 @@ void sapXepChanTangLeGiam(int a[], int n) {
         }
     }
 
-    // Sắp xếp số chẵn tăng dần
+    /// Sắp xếp số chẵn tăng dần
     for (int i = 0; i < soChan - 1; i++) {
         for (int j = i + 1; j < soChan; j++) {
             if (chan[i] > chan[j]) {
@@ -109,7 +109,7 @@ void sapXepChanTangLeGiam(int a[], int n) {
     for (int i = 0; i < soLe; i++) {
         a[idx++] = le[i];
     }
-}
+}//
 
 // Hàm tìm dãy con giảm dài nhất trong mảng
 void timDayConGiamDaiNhat(int a[], int n) {
