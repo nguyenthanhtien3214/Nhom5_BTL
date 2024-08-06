@@ -10,7 +10,7 @@ typedef struct {
     int mau_so;
 } HonSo;
 
-// Hàm tạo mảng chứa hỗn số ngẫu nhiên
+/// Hàm tạo mảng chứa hỗn số ngẫu nhiên
 void taoMangHonSo(HonSo b[], int n) {
     for (int i = 0; i < n; i++) {
         b[i].phan_nguyen = rand() % 10; // Phần nguyên từ 0 đến 9
@@ -19,7 +19,7 @@ void taoMangHonSo(HonSo b[], int n) {
             b[i].mau_so = rand() % 10;
         } while (b[i].mau_so == 0); // Mẫu số khác 0
     }
-}
+}//
 
 // Hàm xuất danh sách hỗn số
 void xuatDanhSachHonSo(HonSo b[], int n) {
