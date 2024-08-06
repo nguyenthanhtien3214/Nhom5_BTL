@@ -137,7 +137,7 @@ void timDayConGiamDaiNhat(int a[], int n) {
     printf("\n");
 }//
 
-// Hàm tìm số nhỏ thứ 2 trong mảng
+/// Hàm tìm số nhỏ thứ 2 trong mảng
 int timSoNhoThuHai(int a[], int n) {
     int min = INT_MAX, secondMin = INT_MAX;
     for (int i = 0; i < n; i++) {
@@ -151,7 +151,7 @@ int timSoNhoThuHai(int a[], int n) {
     }
     return secondMin;
 }
-
+//
 // Hàm kiểm tra nếu một số chứa các chữ số của x
 bool chuaChuSo(int num, int x) {
     char strNum[20], strX[3];
