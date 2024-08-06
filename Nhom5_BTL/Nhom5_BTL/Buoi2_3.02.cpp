@@ -125,14 +125,14 @@ void themHonSo(HonSo b[], int* n, HonSo x, int k) {
     (*n)++;
 }//
 
-// Hàm tạo mảng c chứa các phần tử là phân số được đổi từ các phần tử hỗn số của mảng b
+/// Hàm tạo mảng c chứa các phần tử là phân số được đổi từ các phần tử hỗn số của mảng b
 void taoMangPhanSo(HonSo b[], int n, HonSo c[]) {
     for (int i = 0; i < n; i++) {
         c[i].phan_nguyen = 0;
         c[i].tu_so = b[i].phan_nguyen * b[i].mau_so + b[i].tu_so;
         c[i].mau_so = b[i].mau_so;
     }
-}
+}//
 
 // Hàm tính tổng các phần tử của mảng b
 HonSo tongMang(HonSo b[], int n) {
