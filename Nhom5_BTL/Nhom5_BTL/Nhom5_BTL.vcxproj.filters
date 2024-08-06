@@ -45,6 +45,9 @@
     <ClCompile Include="Buoi3_04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Buoi4_09.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Buoi2_3.02.cpp">
