@@ -183,7 +183,7 @@ void xuatViTriPhanNguyenChan(HonSo b[], int n) {
     printf("\n");
 }//
 
-// Hàm xuất vị trí của phần tử lớn nhất/nhỏ nhất của b
+/// Hàm xuất vị trí của phần tử lớn nhất/nhỏ nhất của b
 void xuatViTriLonNhat(HonSo b[], int n) {
     int maxIdx = 0;
     for (int i = 1; i < n; i++) {
@@ -202,7 +202,7 @@ void xuatViTriNhoNhat(HonSo b[], int n) {
         }
     }
     printf("Vi tri phan tu nho nhat: %d\n", minIdx);
-}
+}//
 
 
 int main() {
