@@ -18,6 +18,7 @@ typedef struct {
 KhachHang dskh[MAX];
 int soKhachHang = 0;
 //
+//
 void docFileKhachHang(const char* tenFile) {
     FILE* file;
     fopen_s(&file, tenFile, "r");
@@ -50,7 +51,7 @@ void docFileKhachHang(const char* tenFile) {
     }
 
     fclose(file);
-}
+}//
 
 void xuatDanhSachKhachHang() {
     for (int i = 0; i < soKhachHang; i++) {
