@@ -99,7 +99,8 @@ void chiaMang(HonSo b[], int n, int s1[], HonSo s2[]) {
     }
 }
 //
-// Hàm xóa phần tử thứ k trong mảng b
+// 
+/// Hàm xóa phần tử thứ k trong mảng b
 void xoaPhanTu(HonSo b[], int* n, int k) {
     if (k < 0 || k >= *n) {
         printf("Vi tri xoa khong hop le\n");
@@ -110,7 +111,7 @@ void xoaPhanTu(HonSo b[], int* n, int k) {
     }
     (*n)--;
 }
-
+//
 // Hàm thêm hỗn số x vào mảng b tại vị trí k
 void themHonSo(HonSo b[], int* n, HonSo x, int k) {
     if (k < 0 || k > *n) {
