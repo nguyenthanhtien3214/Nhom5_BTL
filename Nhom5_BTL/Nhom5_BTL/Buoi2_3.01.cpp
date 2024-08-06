@@ -111,7 +111,7 @@ void sapXepChanTangLeGiam(int a[], int n) {
     }
 }//
 
-// Hàm tìm dãy con giảm dài nhất trong mảng
+/// Hàm tìm dãy con giảm dài nhất trong mảng
 void timDayConGiamDaiNhat(int a[], int n) {
     int maxLen = 1, len = 1;
     int start = 0, end = 0;
@@ -135,7 +135,7 @@ void timDayConGiamDaiNhat(int a[], int n) {
         printf("%d ", a[i]);
     }
     printf("\n");
-}
+}//
 
 // Hàm tìm số nhỏ thứ 2 trong mảng
 int timSoNhoThuHai(int a[], int n) {
