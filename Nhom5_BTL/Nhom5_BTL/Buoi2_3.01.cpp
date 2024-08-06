@@ -41,7 +41,7 @@ int chuSoDau(int n) {
     return n;
 }
 
-// Hàm tính tổng các phần tử có chữ số đầu là chữ số lẻ
+/// Hàm tính tổng các phần tử có chữ số đầu là chữ số lẻ
 int tongChuSoDauLaChuSoLe(int a[], int n) {
     int tong = 0;
     for (int i = 0; i < n; i++) {
@@ -50,7 +50,7 @@ int tongChuSoDauLaChuSoLe(int a[], int n) {
         }
     }
     return tong;
-}
+}//
 
 // Hàm liệt kê số lần xuất hiện của các phần tử trong mảng
 void lietKeSoLanXuatHien(int a[], int n) {
