@@ -94,6 +94,7 @@ void tinhTongDoanhThuTheoPhim() {
     }
 }
 //
+//
 void xuatThongTinPhongChieuXuatChieu() {
     char phongChieu[10], xuatChieu[20];
     printf("Nhap phong chieu: ");
@@ -213,7 +214,7 @@ void timKiemKhachHang() {
         printf("Khach hang %s khong duoc tim thay.\n", hoTen);
     }
 }
-
+//
 
 int main() {
     int luaChon;
