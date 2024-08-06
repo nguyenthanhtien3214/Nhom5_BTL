@@ -52,7 +52,7 @@ int tongChuSoDauLaChuSoLe(int a[], int n) {
     return tong;
 }//
 
-// Hàm liệt kê số lần xuất hiện của các phần tử trong mảng
+/// Hàm liệt kê số lần xuất hiện của các phần tử trong mảng
 void lietKeSoLanXuatHien(int a[], int n) {
     int dem[1000] = { 0 };
     for (int i = 0; i < n; i++) {
@@ -64,7 +64,7 @@ void lietKeSoLanXuatHien(int a[], int n) {
             dem[a[i]] = 0; // Đảm bảo mỗi phần tử chỉ in ra một lần
         }
     }
-}
+}//
 
 // Hàm sắp xếp mảng có số chẵn tăng dần, số lẻ giảm dần
 void sapXepChanTangLeGiam(int a[], int n) {
