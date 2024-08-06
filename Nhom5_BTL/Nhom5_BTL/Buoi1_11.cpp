@@ -41,6 +41,8 @@ void themPhanTu(int arr[], int* n, int x, int k) {
     (*n)++;
 }
 //
+
+//
 void chuyenChanLenDau(int arr[], int n) {
     int* temp = (int*)malloc(n * sizeof(int));
     int index = 0;
@@ -59,7 +61,7 @@ void chuyenChanLenDau(int arr[], int n) {
     }
     free(temp);
 }
-
+//
 int kiemTraXenKe(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         if ((arr[i] % 2 == 0 && arr[i + 1] % 2 == 0) || (arr[i] % 2 != 0 && arr[i + 1] % 2 != 0)) {
