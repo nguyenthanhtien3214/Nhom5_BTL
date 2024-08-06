@@ -16,14 +16,14 @@ int main() {
     chuSoDauTien = tam;
     printf("Chu so dau tien: %d\n", chuSoDauTien);
 
-    // b. Tim chu so dao nguoc cua so nguyen duong n
+    /// b. Tim chu so dao nguoc cua so nguyen duong n
     tam = n;
     while (tam > 0) {
         int chuSo = tam % 10;
         daoNguoc = daoNguoc * 10 + chuSo;
         tam /= 10;
     }
-    printf("Chu so dao nguoc: %d\n", daoNguoc);
+    printf("Chu so dao nguoc: %d\n", daoNguoc);//
 
     // c. Tim chu so lon nhat cua so nguyen duong n
     // d. Tim chu so nho nhat cua so nguyen duong n
