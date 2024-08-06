@@ -57,6 +57,9 @@
     <ClCompile Include="Buoi4_12.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Buoi4_13.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Buoi2_3.02.cpp">
