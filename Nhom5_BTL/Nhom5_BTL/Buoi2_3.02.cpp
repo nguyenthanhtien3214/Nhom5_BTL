@@ -172,7 +172,7 @@ HonSo timHonSoNhoNhat(HonSo b[], int n) {
     return min;
 }
 //
-// Hàm xuất vị trí phần tử có phần nguyên chẵn của b
+/// Hàm xuất vị trí phần tử có phần nguyên chẵn của b
 void xuatViTriPhanNguyenChan(HonSo b[], int n) {
     printf("Vi tri phan tu co phan nguyen chan: ");
     for (int i = 0; i < n; i++) {
@@ -181,7 +181,7 @@ void xuatViTriPhanNguyenChan(HonSo b[], int n) {
         }
     }
     printf("\n");
-}
+}//
 
 // Hàm xuất vị trí của phần tử lớn nhất/nhỏ nhất của b
 void xuatViTriLonNhat(HonSo b[], int n) {
