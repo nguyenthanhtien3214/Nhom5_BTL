@@ -16,7 +16,7 @@ bool laSoNguyenTo(int n) {
     return true;
 }
 
-// Hàm nhập vào số nguyên n và liệt kê các số nguyên tố nhỏ hơn n
+/// Hàm nhập vào số nguyên n và liệt kê các số nguyên tố nhỏ hơn n
 void lietKeSoNguyenToNhoHonN(int n) {
     bool coSoNguyenTo = false;
     for (int i = 2; i < n; i++) {
@@ -32,7 +32,7 @@ void lietKeSoNguyenToNhoHonN(int n) {
         printf("\n");
     }
 }
-
+//
 // Hàm lấy chữ số đầu tiên của một số
 int chuSoDau(int n) {
     while (n >= 10) {
