@@ -37,4 +37,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Buoi2_3.02.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
