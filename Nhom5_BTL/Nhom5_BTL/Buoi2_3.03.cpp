@@ -65,7 +65,7 @@ void xuatDanhSachKhachHang() {
         printf("Tien phai tra: %d\n\n", dskh[i].tienPhaiTra);
     }
 }//
-
+//
 void tinhTienKhachHang() {
     for (int i = 0; i < soKhachHang; i++) {
         dskh[i].tienPhaiTra = dskh[i].soVeNguoiLon * 40000 + dskh[i].soVeTreEm * 20000;
@@ -93,7 +93,7 @@ void tinhTongDoanhThuTheoPhim() {
         printf("Tong doanh thu phim %s: %d\n", dskh[i].tenPhim, doanhThu);
     }
 }
-
+//
 void xuatThongTinPhongChieuXuatChieu() {
     char phongChieu[10], xuatChieu[20];
     printf("Nhap phong chieu: ");
