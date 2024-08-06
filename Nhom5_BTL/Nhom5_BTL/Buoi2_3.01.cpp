@@ -1,216 +1,304 @@
-#include <stdio.h>
-#include <string.h>
+﻿#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <time.h>
+#include <limits.h>
 
-#define MAX 100
+// Định nghĩa kích thước mảng là một hằng số
+#define SIZE 15
 
-typedef struct {
-    char ten[50];
-    char mssv[10];
-    float dtb;
-    char xeploai[20];
-} SinhVien;
-
-void nhapSinhVien(SinhVien* sv) {
-    printf("Nhap ten sinh vien: ");
-    getchar(); // Clear newline buffer
-    fgets(sv->ten, sizeof(sv->ten), stdin);
-    sv->ten[strcspn(sv->ten, "\n")] = '\0'; // Remove newline character
-
-    printf("Nhap MSSV: ");
-    fgets(sv->mssv, sizeof(sv->mssv), stdin);
-    sv->mssv[strcspn(sv->mssv, "\n")] = '\0'; // Remove newline character
-
-    printf("Nhap diem trung binh: ");
-    scanf_s("%f", &sv->dtb);
-
-    if (sv->dtb >= 8.0) {
-        strcpy_s(sv->xeploai, sizeof(sv->xeploai), "Gioi");
+// Hàm kiểm tra số nguyên tố
+bool laSoNguyenTo(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
     }
-    else if (sv->dtb >= 6.5) {
-        strcpy_s(sv->xeploai, sizeof(sv->xeploai), "Kha");
+    return true;
+}
+
+// Hàm nhập vào số nguyên n và liệt kê các số nguyên tố nhỏ hơn n
+void lietKeSoNguyenToNhoHonN(int n) {
+    bool coSoNguyenTo = false;
+    for (int i = 2; i < n; i++) {
+        if (laSoNguyenTo(i)) {
+            printf("%d ", i);
+            coSoNguyenTo = true;
+        }
     }
-    else if (sv->dtb >= 5.0) {
-        strcpy_s(sv->xeploai, sizeof(sv->xeploai), "Trung binh");
+    if (!coSoNguyenTo) {
+        printf("Khong co so nguyen to nao nho hon %d\n", n);
     }
     else {
-        strcpy_s(sv->xeploai, sizeof(sv->xeploai), "Yeu");
+        printf("\n");
     }
 }
 
-void hienThiSinhVien(SinhVien sv) {
-    printf("Ten: %s\n", sv.ten);
-    printf("MSSV: %s\n", sv.mssv);
-    printf("Diem trung binh: %.2f\n", sv.dtb);
-    printf("Xep loai: %s\n", sv.xeploai);
-}
-
-void nhapDanhSachSinhVien(SinhVien ds[], int* n) {
-    printf("Nhap so luong sinh vien: ");
-    scanf_s("%d", n);
-    for (int i = 0; i < *n; i++) {
-        printf("\nNhap thong tin sinh vien thu %d:\n", i + 1);
-        nhapSinhVien(&ds[i]);
+// Hàm lấy chữ số đầu tiên của một số
+int chuSoDau(int n) {
+    while (n >= 10) {
+        n /= 10;
     }
+    return n;
 }
 
-void hienThiDanhSachSinhVien(SinhVien ds[], int n) {
+// Hàm tính tổng các phần tử có chữ số đầu là chữ số lẻ
+int tongChuSoDauLaChuSoLe(int a[], int n) {
+    int tong = 0;
     for (int i = 0; i < n; i++) {
-        printf("\nThong tin sinh vien thu %d:\n", i + 1);
-        hienThiSinhVien(ds[i]);
+        if (chuSoDau(abs(a[i])) % 2 != 0) {
+            tong += a[i];
+        }
+    }
+    return tong;
+}
+
+// Hàm liệt kê số lần xuất hiện của các phần tử trong mảng
+void lietKeSoLanXuatHien(int a[], int n) {
+    int dem[1000] = { 0 };
+    for (int i = 0; i < n; i++) {
+        dem[a[i]]++;
+    }
+    for (int i = 0; i < n; i++) {
+        if (dem[a[i]] != 0) {
+            printf("%d xuat hien %d lan\n", a[i], dem[a[i]]);
+            dem[a[i]] = 0; // Đảm bảo mỗi phần tử chỉ in ra một lần
+        }
     }
 }
 
-void interchangeSort(SinhVien ds[], int n) {
-    SinhVien temp;
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (ds[i].dtb > ds[j].dtb) {
-                temp = ds[i];
-                ds[i] = ds[j];
-                ds[j] = temp;
+// Hàm sắp xếp mảng có số chẵn tăng dần, số lẻ giảm dần
+void sapXepChanTangLeGiam(int a[], int n) {
+    int chan[SIZE], le[SIZE];
+    int soChan = 0, soLe = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            chan[soChan++] = a[i];
+        }
+        else {
+            le[soLe++] = a[i];
+        }
+    }
+
+    // Sắp xếp số chẵn tăng dần
+    for (int i = 0; i < soChan - 1; i++) {
+        for (int j = i + 1; j < soChan; j++) {
+            if (chan[i] > chan[j]) {
+                int temp = chan[i];
+                chan[i] = chan[j];
+                chan[j] = temp;
             }
         }
     }
-}
 
-void selectionSort(SinhVien ds[], int n) {
-    int minIdx;
-    SinhVien temp;
-    for (int i = 0; i < n - 1; i++) {
-        minIdx = i;
-        for (int j = i + 1; j < n; j++) {
-            if (ds[j].dtb < ds[minIdx].dtb) {
-                minIdx = j;
+    // Sắp xếp số lẻ giảm dần
+    for (int i = 0; i < soLe - 1; i++) {
+        for (int j = i + 1; j < soLe; j++) {
+            if (le[i] < le[j]) {
+                int temp = le[i];
+                le[i] = le[j];
+                le[j] = temp;
             }
         }
-        if (minIdx != i) {
-            temp = ds[i];
-            ds[i] = ds[minIdx];
-            ds[minIdx] = temp;
-        }
+    }
+
+    int idx = 0;
+    for (int i = 0; i < soChan; i++) {
+        a[idx++] = chan[i];
+    }
+    for (int i = 0; i < soLe; i++) {
+        a[idx++] = le[i];
     }
 }
 
-void quickSort(SinhVien ds[], int left, int right) {
-    int i = left, j = right;
-    float pivot = ds[(left + right) / 2].dtb;
-    SinhVien temp;
-    while (i <= j) {
-        while (ds[i].dtb < pivot) i++;
-        while (ds[j].dtb > pivot) j--;
-        if (i <= j) {
-            temp = ds[i];
-            ds[i] = ds[j];
-            ds[j] = temp;
-            i++;
-            j--;
-        }
-    }
-    if (left < j) quickSort(ds, left, j);
-    if (i < right) quickSort(ds, i, right);
-}
+// Hàm tìm dãy con giảm dài nhất trong mảng
+void timDayConGiamDaiNhat(int a[], int n) {
+    int maxLen = 1, len = 1;
+    int start = 0, end = 0;
 
-void timSinhVienCaoNhatThapNhat(SinhVien ds[], int n) {
-    if (n == 0) {
-        printf("Danh sach sinh vien rong.\n");
-        return;
-    }
-    SinhVien* maxSV = &ds[0];
-    SinhVien* minSV = &ds[0];
     for (int i = 1; i < n; i++) {
-        if (ds[i].dtb > maxSV->dtb) {
-            maxSV = &ds[i];
+        if (a[i] < a[i - 1]) {
+            len++;
+            if (len > maxLen) {
+                maxLen = len;
+                end = i;
+            }
         }
-        if (ds[i].dtb < minSV->dtb) {
-            minSV = &ds[i];
+        else {
+            len = 1;
         }
     }
-    printf("\nSinh vien co diem trung binh cao nhat:\n");
-    hienThiSinhVien(*maxSV);
-    printf("\nSinh vien co diem trung binh thap nhat:\n");
-    hienThiSinhVien(*minSV);
+
+    start = end - maxLen + 1;
+    printf("Day con giam dai nhat: ");
+    for (int i = start; i <= end; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
 }
 
-void inSinhVienGioiKha(SinhVien ds[], int n) {
-    printf("\nDanh sach sinh vien xep loai Gioi va Kha:\n");
+// Hàm tìm số nhỏ thứ 2 trong mảng
+int timSoNhoThuHai(int a[], int n) {
+    int min = INT_MAX, secondMin = INT_MAX;
     for (int i = 0; i < n; i++) {
-        if (strcmp(ds[i].xeploai, "Gioi") == 0 || strcmp(ds[i].xeploai, "Kha") == 0) {
-            hienThiSinhVien(ds[i]);
+        if (a[i] < min) {
+            secondMin = min;
+            min = a[i];
+        }
+        else if (a[i] < secondMin && a[i] != min) {
+            secondMin = a[i];
         }
     }
+    return secondMin;
 }
 
-int demSinhVienHoNguyen(SinhVien ds[], int n) {
-    int count = 0;
+// Hàm kiểm tra nếu một số chứa các chữ số của x
+bool chuaChuSo(int num, int x) {
+    char strNum[20], strX[3];
+    sprintf_s(strNum, "%d", num);
+    sprintf_s(strX, "%d", x);
+
+    int i = 0, j = 0;
+    while (strNum[i] != '\0' && strX[j] != '\0') {
+        if (strNum[i] == strX[j]) {
+            j++;
+        }
+        i++;
+    }
+    return strX[j] == '\0';
+}
+
+// Hàm tìm các phần tử trong mảng chứa các chữ số của x
+void timPhanTuChuaChuSo(int a[], int n, int x) {
+    printf("Cac phan tu trong mang chua cac chu so cua %d: ", x);
     for (int i = 0; i < n; i++) {
-        if (strncmp(ds[i].ten, "Nguyen", 6) == 0) {
-            count++;
+        if (chuaChuSo(a[i], x)) {
+            printf("%d ", a[i]);
         }
     }
-    return count;
+    printf("\n");
 }
 
-void menu() {
-    printf("Chuong trinh quan ly sinh vien\n");
-    printf("1. Nhap danh sach sinh vien\n");
-    printf("2. Hien thi danh sach sinh vien\n");
-    printf("3. Sap xep danh sach sinh vien tang dan theo diem trung binh (InterchangeSort)\n");
-    printf("4. Sap xep danh sach sinh vien tang dan theo diem trung binh (SelectionSort)\n");
-    printf("5. Sap xep danh sach sinh vien tang dan theo diem trung binh (QuickSort)\n");
-    printf("6. Tim sinh vien co diem trung binh cao nhat va thap nhat\n");
-    printf("7. In danh sach sinh vien xep loai Gioi va Kha\n");
-    printf("8. Dem so luong sinh vien co ho 'Nguyen'\n");
-    printf("9. Thoat\n");
+// Hàm sắp xếp mảng: số chẵn tăng dần, số lẻ giữ nguyên vị trí
+void sapXepChanTangLeGiuNguyen(int a[], int n) {
+    int chan[SIZE];
+    int soChan = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            chan[soChan++] = a[i];
+        }
+    }
+
+    // Sắp xếp số chẵn tăng dần
+    for (int i = 0; i < soChan - 1; i++) {
+        for (int j = i + 1; j < soChan; j++) {
+            if (chan[i] > chan[j]) {
+                int temp = chan[i];
+                chan[i] = chan[j];
+                chan[j] = temp;
+            }
+        }
+    }
+
+    int idx = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            a[i] = chan[idx++];
+        }
+    }
 }
+
+// Hàm sắp xếp mảng: số lẻ ở đầu mảng, số chẵn ở cuối mảng
+void sapXepLeDauChanCuoi(int a[], int n) {
+    int b[SIZE];
+    int idx = 0;
+
+    // Sắp xếp số lẻ vào đầu mảng
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0) {
+            b[idx++] = a[i];
+        }
+    }
+
+    // Sắp xếp số chẵn vào cuối mảng
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            b[idx++] = a[i];
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        a[i] = b[i];
+    }
+}
+
 
 int main() {
-    SinhVien ds[MAX];
-    int n = 0;
-    int luaChon;
+    srand((unsigned int)time(0));
 
-    do {
-        menu();
-        printf("Nhap lua chon: ");
-        scanf_s("%d", &luaChon);
+    int n = SIZE;
+    int a[SIZE];
 
-        switch (luaChon) {
-        case 1:
-            nhapDanhSachSinhVien(ds, &n);
-            break;
-        case 2:
-            hienThiDanhSachSinhVien(ds, n);
-            break;
-        case 3:
-            interchangeSort(ds, n);
-            printf("Danh sach sinh vien sau khi sap xep tang dan theo diem trung binh (InterchangeSort):\n");
-            hienThiDanhSachSinhVien(ds, n);
-            break;
-        case 4:
-            selectionSort(ds, n);
-            printf("Danh sach sinh vien sau khi sap xep tang dan theo diem trung binh (SelectionSort):\n");
-            hienThiDanhSachSinhVien(ds, n);
-            break;
-        case 5:
-            quickSort(ds, 0, n - 1);
-            printf("Danh sach sinh vien sau khi sap xep tang dan theo diem trung binh (QuickSort):\n");
-            hienThiDanhSachSinhVien(ds, n);
-            break;
-        case 6:
-            timSinhVienCaoNhatThapNhat(ds, n);
-            break;
-        case 7:
-            inSinhVienGioiKha(ds, n);
-            break;
-        case 8:
-            printf("So luong sinh vien co ho 'Nguyen': %d\n", demSinhVienHoNguyen(ds, n));
-            break;
-        case 9:
-            printf("Thoat chuong trinh.\n");
-            break;
-        default:
-            printf("Lua chon khong hop le. Vui long chon lai.\n");
-        }
-    } while (luaChon != 9);
+    // Tạo mảng ngẫu nhiên
+    for (int i = 0; i < n; i++) {
+        a[i] = rand() % 100;
+    }
+
+    // Xuất mảng
+    printf("Mang ban dau: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    // 1. Liệt kê các số nguyên tố nhỏ hơn n
+    int soNguyen = 50;
+    printf("Cac so nguyen to nho hon %d: ", soNguyen);
+    lietKeSoNguyenToNhoHonN(soNguyen);
+
+    // 2. Tính tổng các phần tử có chữ số đầu là chữ số lẻ
+    int tong = tongChuSoDauLaChuSoLe(a, n);
+    printf("Tong cac phan tu co chu so dau la chu so le: %d\n", tong);
+
+    // 3. Liệt kê số lần xuất hiện của các phần tử trong mảng
+    printf("So lan xuat hien cua cac phan tu trong mang:\n");
+    lietKeSoLanXuatHien(a, n);
+
+    // 4. Sắp xếp mảng có số chẵn tăng dần, số lẻ giảm dần
+    sapXepChanTangLeGiam(a, n);
+    printf("Mang sau khi sap xep chan tang le giam: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    // 5. Tìm dãy con giảm dài nhất trong a
+    timDayConGiamDaiNhat(a, n);
+
+    // 6. Tìm số nhỏ thứ 2 trong mảng
+    int soNhoThuHai = timSoNhoThuHai(a, n);
+    printf("So nho thu hai trong mang: %d\n", soNhoThuHai);
+
+    // 7. Tìm các phần tử trong a chứa các chữ số của x
+    int x = 28;
+    timPhanTuChuaChuSo(a, n, x);
+
+    // 8. Sắp xếp mảng: số chẵn tăng dần, số lẻ giữ nguyên vị trí
+    sapXepChanTangLeGiuNguyen(a, n);
+    printf("Mang sau khi sap xep chan tang le giu nguyen: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    // 9. Sắp xếp mảng: số lẻ ở đầu mảng, số chẵn ở cuối mảng
+    sapXepLeDauChanCuoi(a, n);
+    printf("Mang sau khi sap xep le dau chan cuoi: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
 
     return 0;
 }
