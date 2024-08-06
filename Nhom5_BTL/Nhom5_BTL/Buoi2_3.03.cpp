@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define MAX 100
-
+//
 typedef struct {
     char hoTen[50];
     char soDienThoai[15];
@@ -17,7 +17,7 @@ typedef struct {
 
 KhachHang dskh[MAX];
 int soKhachHang = 0;
-
+//
 void docFileKhachHang(const char* tenFile) {
     FILE* file;
     fopen_s(&file, tenFile, "r");
