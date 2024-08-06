@@ -52,7 +52,7 @@ void docFileKhachHang(const char* tenFile) {
 
     fclose(file);
 }//
-
+//
 void xuatDanhSachKhachHang() {
     for (int i = 0; i < soKhachHang; i++) {
         printf("Ho ten: %s\n", dskh[i].hoTen);
@@ -64,7 +64,7 @@ void xuatDanhSachKhachHang() {
         printf("Xuat chieu: %s\n", dskh[i].xuatChieu);
         printf("Tien phai tra: %d\n\n", dskh[i].tienPhaiTra);
     }
-}
+}//
 
 void tinhTienKhachHang() {
     for (int i = 0; i < soKhachHang; i++) {
