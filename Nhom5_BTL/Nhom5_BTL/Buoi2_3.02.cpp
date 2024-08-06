@@ -112,7 +112,7 @@ void xoaPhanTu(HonSo b[], int* n, int k) {
     (*n)--;
 }
 //
-// Hàm thêm hỗn số x vào mảng b tại vị trí k
+/// Hàm thêm hỗn số x vào mảng b tại vị trí k
 void themHonSo(HonSo b[], int* n, HonSo x, int k) {
     if (k < 0 || k > *n) {
         printf("Vi tri them khong hop le\n");
@@ -123,7 +123,7 @@ void themHonSo(HonSo b[], int* n, HonSo x, int k) {
     }
     b[k] = x;
     (*n)++;
-}
+}//
 
 // Hàm tạo mảng c chứa các phần tử là phân số được đổi từ các phần tử hỗn số của mảng b
 void taoMangPhanSo(HonSo b[], int n, HonSo c[]) {
