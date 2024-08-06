@@ -89,7 +89,7 @@ int timHonSoBinarySearch(HonSo b[], int n, HonSo x) {
     return -1;
 }//
 
-// Hàm chia mảng b thành 2 mảng s1 và s2, với s1 chứa các phần nguyên, s2 chứa phân số
+/// Hàm chia mảng b thành 2 mảng s1 và s2, với s1 chứa các phần nguyên, s2 chứa phân số
 void chiaMang(HonSo b[], int n, int s1[], HonSo s2[]) {
     for (int i = 0; i < n; i++) {
         s1[i] = b[i].phan_nguyen;
@@ -98,7 +98,7 @@ void chiaMang(HonSo b[], int n, int s1[], HonSo s2[]) {
         s2[i].mau_so = b[i].mau_so;
     }
 }
-
+//
 // Hàm xóa phần tử thứ k trong mảng b
 void xoaPhanTu(HonSo b[], int* n, int k) {
     if (k < 0 || k >= *n) {
