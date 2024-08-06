@@ -152,7 +152,7 @@ int timSoNhoThuHai(int a[], int n) {
     return secondMin;
 }
 //
-// Hàm kiểm tra nếu một số chứa các chữ số của x
+/// Hàm kiểm tra nếu một số chứa các chữ số của x
 bool chuaChuSo(int num, int x) {
     char strNum[20], strX[3];
     sprintf_s(strNum, "%d", num);
@@ -177,7 +177,7 @@ void timPhanTuChuaChuSo(int a[], int n, int x) {
         }
     }
     printf("\n");
-}
+}//
 
 // Hàm sắp xếp mảng: số chẵn tăng dần, số lẻ giữ nguyên vị trí
 void sapXepChanTangLeGiuNguyen(int a[], int n) {
