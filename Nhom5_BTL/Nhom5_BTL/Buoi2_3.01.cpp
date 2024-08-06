@@ -209,7 +209,7 @@ void sapXepChanTangLeGiuNguyen(int a[], int n) {
     }
 }//
 
-// Hàm sắp xếp mảng: số lẻ ở đầu mảng, số chẵn ở cuối mảng
+/// Hàm sắp xếp mảng: số lẻ ở đầu mảng, số chẵn ở cuối mảng
 void sapXepLeDauChanCuoi(int a[], int n) {
     int b[SIZE];
     int idx = 0;
@@ -232,7 +232,7 @@ void sapXepLeDauChanCuoi(int a[], int n) {
         a[i] = b[i];
     }
 }
-
+//
 
 int main() {
     srand((unsigned int)time(0));
