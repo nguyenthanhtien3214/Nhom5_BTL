@@ -27,6 +27,8 @@ void xoaPhanTu(int arr[], int* n, int k) {
     (*n)--;
 }
 //
+
+//
 void themPhanTu(int arr[], int* n, int x, int k) {
     if (k < 0 || k > *n) {
         printf("Vi tri k khong hop le\n");
@@ -38,7 +40,7 @@ void themPhanTu(int arr[], int* n, int x, int k) {
     arr[k] = x;
     (*n)++;
 }
-
+//
 void chuyenChanLenDau(int arr[], int n) {
     int* temp = (int*)malloc(n * sizeof(int));
     int index = 0;
