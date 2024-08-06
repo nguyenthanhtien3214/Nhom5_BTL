@@ -175,7 +175,10 @@
     <ClCompile Include="Buoi4_14.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Buoi4_15.cpp" />
+    <ClCompile Include="Buoi4_15.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Buoi4_16.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Buoi2_3.02.cpp">
