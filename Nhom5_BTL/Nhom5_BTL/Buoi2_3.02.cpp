@@ -38,7 +38,7 @@ int timHonSoLinearSearch(HonSo b[], int n, HonSo x) {
     return -1;
 }//
 
-// Hàm sắp xếp b sao cho các phần tử có phần nguyên chẵn lên đầu, phần tử có phần nguyên lẻ ở cuối mảng
+/// Hàm sắp xếp b sao cho các phần tử có phần nguyên chẵn lên đầu, phần tử có phần nguyên lẻ ở cuối mảng
 void sapXepChanLe(HonSo b[], int n) {
     HonSo temp;
     int j = 0;
@@ -50,7 +50,7 @@ void sapXepChanLe(HonSo b[], int n) {
             j++;
         }
     }
-}
+}//
 
 // Hàm so sánh hai hỗn số
 int soSanhHonSo(HonSo hs1, HonSo hs2) {
@@ -87,7 +87,7 @@ int timHonSoBinarySearch(HonSo b[], int n, HonSo x) {
         }
     }
     return -1;
-}
+}//
 
 // Hàm chia mảng b thành 2 mảng s1 và s2, với s1 chứa các phần nguyên, s2 chứa phân số
 void chiaMang(HonSo b[], int n, int s1[], HonSo s2[]) {
