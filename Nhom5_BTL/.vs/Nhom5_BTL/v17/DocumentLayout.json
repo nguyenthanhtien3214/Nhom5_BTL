@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi1_09.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1C0ABC48-99D7-48CA-8314-B35D8F6A7319}|Nhom5_BTL\\Nhom5_BTL.vcxproj|solutionrelative:Nhom5_BTL\\Buoi1_09.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Buoi1_09.cpp",
+              "DocumentMoniker": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi1_09.cpp",
+              "RelativeDocumentMoniker": "Nhom5_BTL\\Buoi1_09.cpp",
+              "ToolTip": "E:\\HUIT\\HK3(2024-2025)\\TH KTLT\\Nhom5_BTL\\Nhom5_BTL\\Nhom5_BTL\\Buoi1_09.cpp",
+              "RelativeToolTip": "Nhom5_BTL\\Buoi1_09.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-06T16:15:25.779Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
