@@ -5,7 +5,7 @@
 #define MAX_ROWS 100
 #define MAX_COLS 100
 
-// Hàm tạo và xuất ma trận chứa các phần tử ngẫu nhiên từ 0 đến k
+/// Hàm tạo và xuất ma trận chứa các phần tử ngẫu nhiên từ 0 đến k
 void generate_and_print_matrix(int a[MAX_ROWS][MAX_COLS], int m, int n, int k) {
     srand(time(0));
     for (int i = 0; i < m; i++) {
@@ -33,7 +33,7 @@ void print_odd_columns(int a[MAX_ROWS][MAX_COLS], int m, int n) {
                 printf("%d ", a[i][j]);
             }
             printf("\n");
-        }//
+        }///
     }
 }
 
@@ -49,7 +49,7 @@ int max_border_element(int a[MAX_ROWS][MAX_COLS], int m, int n) {
         if (a[i][n - 1] > max) max = a[i][n - 1];
     }
     return max;
-}//
+}///
 
 /// Hàm kiểm tra xem một số có chứa chữ số 2 hay không
 int contains_digit_2(int num) {
@@ -71,7 +71,7 @@ int count_elements_with_digit_2(int a[MAX_ROWS][MAX_COLS], int m, int n) {
         }
     }
     return count;
-}//
+}///
 
 /// Hàm xuất các phần tử cực tiểu
 void local_minima(int a[MAX_ROWS][MAX_COLS], int m, int n) {
